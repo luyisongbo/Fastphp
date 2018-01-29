@@ -65,6 +65,18 @@ class Fastphp{
         call_user_func_array(array($dispatch,$actionName),$param);
     }
 
+    //自动加载类
+    public function loadClass($className){
+
+    }
+
+    //内核文件命名空间映射关系
+    protected function classMap(){
+        return[
+            'fast\base\Controller' => CORE_PATH . '/base/Controller.php',
+        ];
+    }
+
 
 
 }
